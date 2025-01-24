@@ -3,7 +3,8 @@ import { initTRPC } from "@trpc/server";
 import { createNextApiHandler } from "@trpc/server/adapters/next";
 import { inferAsyncReturnType } from "@trpc/server";
 import { connectToSurrealDB, db } from "./db/surreal";
- 
+import { db, connectDB } from "@/server/db";
+
 
 const t = initTRPC.create();
 export const router = t.router;
